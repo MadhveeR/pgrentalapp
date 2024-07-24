@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">pgrentalapp</string>
+    <string name="Login_Here">Login Here</string>
+    <string name="welcom_back">Welcome back you\'ve\nbeen missed!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot">Forgot</string>
+    <string name="create">Create new account</string>
+
+</resources>
