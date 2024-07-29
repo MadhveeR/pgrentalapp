@@ -1,9 +1,11 @@
 package com.example.pgrentalapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button signin;
     EditText email,password;
+    TextView forgot,createAccount;
 
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
@@ -25,6 +28,25 @@ public class MainActivity extends AppCompatActivity {
         signin = findViewById(R.id.main_signin);
         email =findViewById(R.id.main_email);
         password =findViewById(R.id.main_password);
+
+        forgot =findViewById(R.id.main_forgot);
+        createAccount =findViewById(R.id.main_create_account);
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, ForgotActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("Loging Successfully");
                     Toast.makeText(MainActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
                     Snackbar.make(view, "Loging Successfully", Snackbar.LENGTH_LONG).show();
+                    Intent intent=new Intent(MainActivity.this,DashboardActivity.class);
+                    startActivity(intent);
                 }
             }
         });

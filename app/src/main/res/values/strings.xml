@@ -3,9 +3,25 @@
     <string name="app_name">pgrentalapp</string>
     <string name="Login_Here">Login Here</string>
     <string name="welcom_back">Welcome back you\'ve\nbeen missed!</string>
+    <string name="signin">Sign In</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="confirmpassword">ConfirmPassword</string>
     <string name="forgot">Forgot</string>
     <string name="create">Create new account</string>
+
+    <string name="create_account_title">Create Account</string>
+    <string name="create_account_desc">Create an account so you can exprolre all the exizting jobs</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+
+    <string name="signup">Sign Up</string>
+    <string name="already">Already have a account</string>
+
+    <string name="forgott">Forgot</string>
+    <string name="emailt">Email</string>
+    <string name="passwordt">Password</string>
+    <string name="confirmpasswordt">ConfirmPassword</string>
+    <string name="submit">Submit</string>
 
 </resources>

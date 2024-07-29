@@ -11,6 +11,7 @@
 
     <TextView
         style="@style/text_40"
+        android:textSize="@dimen/_40sdp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_40sdp"
         android:text="@string/Login_Here"
@@ -27,32 +28,23 @@
         android:text="@string/welcom_back" />
 
     <EditText
+        style="@style/edit_16"
         android:id="@+id/main_email"
-        android:padding="@dimen/_10sdp"
-        android:background="@drawable/custom_border"
-        android:drawablePadding="@dimen/_5sdp"
         android:drawableLeft="@drawable/mail"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginHorizontal="@dimen/_15sdp"
-        android:hint="@string/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_marginTop="@dimen/_15sdp"
+        android:hint="@string/email" />
 
     <EditText
+        style="@style/edit_16"
         android:id="@+id/main_password"
-        android:padding="@dimen/_10sdp"
-        android:background="@drawable/custom_border"
-        android:drawablePadding="@dimen/_5sdp"
         android:drawableLeft="@drawable/safe"
         android:inputType="textPassword"
         android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginHorizontal="@dimen/_15sdp"
-        android:hint="@string/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:hint="@string/password" />
 
     <TextView
+        android:id="@+id/main_forgot"
         style="@style/text_20"
         android:layout_gravity="end"
         android:layout_marginTop="@dimen/_20sdp"
@@ -62,6 +54,7 @@
         android:textStyle="bold" />
 
     <Button
+        style="@style/button_16"
         android:id="@+id/main_signin"
         app:backgroundTint="@null"
         android:background="@drawable/custom_button"
@@ -70,11 +63,10 @@
         android:textColor="@color/white"
         android:text="Sign in"
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_marginHorizontal="@dimen/_20sdp" />
 
     <TextView
+        android:id="@+id/main_create_account"
         style="@style/text_19"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_20sdp"

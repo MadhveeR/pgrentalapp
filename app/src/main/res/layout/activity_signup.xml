@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/text_40"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/create_account_title"
+        android:textColor="@color/pruple"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/text_20"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="@string/create_account_desc" />
+
+    <EditText
+        style="@style/edit_16"
+        android:id="@+id/signup_name"
+        android:drawableLeft="@drawable/user"
+        android:inputType="textPersonName"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/name" />
+
+    <EditText
+        android:maxLength="10"
+        style="@style/edit_16"
+        android:id="@+id/signup_contact"
+        android:drawableLeft="@drawable/phone"
+        android:inputType="phone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/contact" />
+
+    <EditText
+        style="@style/edit_16"
+        android:id="@+id/signup_email"
+        android:drawableLeft="@drawable/mail"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/email" />
+
+    <EditText
+        style="@style/edit_16"
+        android:id="@+id/signup_password"
+        android:drawableLeft="@drawable/safe"
+        android:inputType="textPassword"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/password" />
+
+    <EditText
+        style="@style/edit_16"
+        android:id="@+id/signup_confirmpassword"
+        android:drawableLeft="@drawable/confirm"
+        android:inputType="textPassword"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/confirmpassword" />
+
+    <Button
+        style="@style/button_16"
+        android:id="@+id/signup_signup"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_button"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/signup"
+        android:layout_marginTop="@dimen/_20sdp" />
+
+    <TextView
+        android:id="@+id/signup_already"
+        style="@style/text_19"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:text="@string/already" />
+</LinearLayout>
+
+</ScrollView>
