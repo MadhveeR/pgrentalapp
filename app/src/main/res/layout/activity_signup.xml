@@ -31,7 +31,7 @@
 
     <EditText
         style="@style/edit_16"
-        android:id="@+id/signup_name"
+        android:id="@+id/signup_names"
         android:drawableLeft="@drawable/user"
         android:inputType="textPersonName"
         android:layout_marginTop="@dimen/_10sdp"
@@ -40,7 +40,7 @@
     <EditText
         android:maxLength="10"
         style="@style/edit_16"
-        android:id="@+id/signup_contact"
+        android:id="@+id/signup_contacts"
         android:drawableLeft="@drawable/phone"
         android:inputType="phone"
         android:layout_marginTop="@dimen/_10sdp"
@@ -48,7 +48,7 @@
 
     <EditText
         style="@style/edit_16"
-        android:id="@+id/signup_email"
+        android:id="@+id/signup_emails"
         android:drawableLeft="@drawable/mail"
         android:inputType="textEmailAddress"
         android:layout_marginTop="@dimen/_10sdp"
@@ -56,7 +56,7 @@
 
     <EditText
         style="@style/edit_16"
-        android:id="@+id/signup_password"
+        android:id="@+id/signup_passwords"
         android:drawableLeft="@drawable/safe"
         android:inputType="textPassword"
         android:layout_marginTop="@dimen/_10sdp"
@@ -64,7 +64,7 @@
 
     <EditText
         style="@style/edit_16"
-        android:id="@+id/signup_confirmpassword"
+        android:id="@+id/signup_confirmpasswords"
         android:drawableLeft="@drawable/confirm"
         android:inputType="textPassword"
         android:layout_marginTop="@dimen/_10sdp"

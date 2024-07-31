@@ -18,6 +18,12 @@
     <string name="signup">Sign Up</string>
     <string name="already">Already have a account</string>
 
+    <string name="names">Name</string>
+    <string name="contacts">Contact</string>
+    <string name="emails">Email</string>
+    <string name="passwords">Password</string>
+    <string name="confirmpasswords">ConfirmPassword</string>
+
     <string name="forgott">Forgot</string>
     <string name="emailt">Email</string>
     <string name="passwordt">Password</string>

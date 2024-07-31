@@ -1,5 +1,6 @@
 package com.example.pgrentalapp;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,11 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -21,16 +18,23 @@ public class SignupActivity extends AppCompatActivity {
 
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
+    SQLiteDatabase db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        name =findViewById(R.id.signup_name);
-        contact =findViewById(R.id.signup_contact);
-        email =findViewById(R.id.signup_email);
-        password =findViewById(R.id.signup_password);
-        confirmpassword =findViewById(R.id.signup_confirmpassword);
+        db = openOrCreateDatabase("AndroidPgRentalApp.db", MODE_PRIVATE, null);
+        String tableQuery = "CREATE TABLE IF NOT EXISTS USERS(USERID  INTEGER PRIMARY KEY AUTOINCREMENT ,NAME VARCHAR(100),EMAIL VARCHAR(50),CONTACT BIGINT(10),PASSWORD VARCHAR(20))";
+        db.execSQL(tableQuery);
+
+
+        name = findViewById(R.id.signup_names);
+        contact = findViewById(R.id.signup_contacts);
+        email = findViewById(R.id.signup_emails);
+        password = findViewById(R.id.signup_passwords);
+        confirmpassword = findViewById(R.id.signup_confirmpasswords);
         submit =findViewById(R.id.signup_signup);
         already =findViewById(R.id.signup_already);
 
@@ -75,6 +79,8 @@ public class SignupActivity extends AppCompatActivity {
                     confirmpassword.setError("Password Does Not Match");
                 }
                 else{
+                    String insertQuery = "TNSERT TNTO USERS VALUES(NULL,'" + name.getText().toString() + "','" + email.getText().toString() + "','" + contact.getText().toString() + "','" + password.getText().toString() + "')";
+                    db.execSQL(insertQuery);
                     Toast.makeText(SignupActivity.this, "Signup Successfully", Toast.LENGTH_SHORT).show();
                     onBackPressed();
                 }
